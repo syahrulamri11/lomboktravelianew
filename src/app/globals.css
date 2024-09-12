@@ -1,0 +1,57 @@
+/* globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+/* Define custom CSS variables */
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* Body styles */
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Menjamin setidaknya tinggi layar saat ini */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Utility class */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.container {
+  flex: 1; /* Mengisi seluruh ruang tersedia */
+  max-width: 100%; /* Lebar maksimum sesuai dengan ukuran viewport */
+  margin: 0 auto; /* Pusatkan container */
+  padding: 0 0; /* Ruang bantal di sekitar konten */
+}
+
+.debug{
+  background-color: aquamarine;
+}
