@@ -9,9 +9,27 @@ import {
   NavbarContent,
   NavbarItem,
 } from "@nextui-org/react";
+import { UserContext } from "@/utils/userContext";
+import { useContext } from "react";
+import { usePathname } from "next/navigation";
+import { DropDownAvatar } from "./dropDownAvatar";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [currentUser, setCurrentUser] = useContext(UserContext);
+  const pathname = usePathname();
+
+  const navItems = [
+    { href: "/", label: "Home" },
+    { href: "/paket-tour", label: "Paket Tour" },
+    { href: "/destinasi", label: "Destinasi" },
+    { href: "/gallery", label: "Gallery" },
+    { href: "/contact-us", label: "Contact Us" },
+  ];
+
+  if (currentUser?.role === "admin") {
+    navItems.push({ href: "/admin/dashboard", label: "Admin" });
+  }
 
   return (
     <Navbar
@@ -37,72 +55,60 @@ const Header = () => {
       </NavbarContent>
 
       <NavbarContent className="hidden md:flex gap-4" justify="end">
+        {navItems.map((item) => (
+          <NavbarItem key={item.href}>
+            <Link href={item.href} legacyBehavior>
+              <a
+                className={`${
+                  pathname === item.href
+                    ? "text-green-600"
+                    : "text-gray-600 hover:text-green-600"
+                }`}
+              >
+                {item.label}
+              </a>
+            </Link>
+          </NavbarItem>
+        ))}
         <NavbarItem>
-          <Link href="/" legacyBehavior>
-            <a className="text-gray-600 hover:text-green-600">Home</a>
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link href="/paket-tour" legacyBehavior>
-            <a className="text-gray-600 hover:text-green-600">Paket Tour</a>
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link href="/destinasi" legacyBehavior>
-            <a className="text-gray-600 hover:text-green-600">Destinasi</a>
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link href="/gallery" legacyBehavior>
-            <a className="text-gray-600 hover:text-green-600">Gallery</a>
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link href="/contact-us" legacyBehavior>
-            <a className="text-gray-600 hover:text-green-600">Contact Us</a>
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link href="/login" legacyBehavior>
-            <a className="bg-green-600 text-white px-4 py-2 rounded">Login</a>
-          </Link>
+          {currentUser ? (
+            <DropDownAvatar user={currentUser} />
+          ) : (
+            <Link href="/login" legacyBehavior>
+              <a className="bg-green-600 text-white px-4 py-2 rounded">Login</a>
+            </Link>
+          )}
         </NavbarItem>
       </NavbarContent>
 
       <NavbarContent className="md:hidden" justify="end">
         <NavbarItem>
-          <Link href="/login" legacyBehavior>
-            <a className="bg-green-600 text-white px-4 py-2 rounded">Login</a>
-          </Link>
+          {currentUser ? (
+            <DropDownAvatar user={currentUser} />
+          ) : (
+            <Link href="/login" legacyBehavior>
+              <a className="bg-green-600 text-white px-4 py-2 rounded">Login</a>
+            </Link>
+          )}
         </NavbarItem>
       </NavbarContent>
 
       <NavbarMenu>
-        <NavbarMenuItem>
-          <Link href="/home" legacyBehavior>
-            <a className="text-gray-600 hover:text-green-600">Home</a>
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link href="/paket-tour" legacyBehavior>
-            <a className="text-gray-600 hover:text-green-600">Paket Tour</a>
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link href="/destinasi" legacyBehavior>
-            <a className="text-gray-600 hover:text-green-600">Destinasi</a>
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link href="/gallery" legacyBehavior>
-            <a className="text-gray-600 hover:text-green-600">Gallery</a>
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link href="/contact-us" legacyBehavior>
-            <a className="text-gray-600 hover:text-green-600">Contact Us</a>
-          </Link>
-        </NavbarMenuItem>
+        {navItems.map((item) => (
+          <NavbarMenuItem key={item.href}>
+            <Link href={item.href} legacyBehavior>
+              <a
+                className={`${
+                  pathname === item.href
+                    ? "text-green-600"
+                    : "text-gray-600 hover:text-green-600"
+                }`}
+              >
+                {item.label}
+              </a>
+            </Link>
+          </NavbarMenuItem>
+        ))}
       </NavbarMenu>
     </Navbar>
   );
