@@ -33,10 +33,10 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    fetch('/api/review') // Fetch all reviews without id_tour
+    fetch('/api/review') 
       .then((res) => res.json())
       .then((data) => {
-        console.log('Fetched reviews:', data); // Debug
+        console.log('Fetched reviews:', data); 
         setReviews(data.reviews || []);
       })
       .catch((error) => {
