@@ -211,6 +211,17 @@ export default function DestinasiDetailPage({ params }) {
           </TwitterShareButton>
         </div>
       </section>
+
+      <a
+        href="https://wa.me/6285338717747?text=Hallo%20Saya%20Ingin%20Berkonsultasi%20Untuk%20Paket%20Tour%20Di%20Lombok%20Travelia"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg transition-all hover:shadow-xl hover:bg-green-600 flex items-center"
+        style={{ zIndex: 1000 }} // Agar berada di atas konten lain
+      >
+        <Image src="/images/wa-icon.svg" alt="WhatsApp" width={40} height={40} />
+      </a>
+
     </div>
   );
 }
