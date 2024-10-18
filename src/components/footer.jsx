@@ -22,7 +22,7 @@ const Footer = () => {
               <a href="https://x.com/dicoding" target="_blank" rel="noopener noreferrer">
                 <FaTimes className="w-6 h-6 text-black-500 hover:text-black-700" />
               </a>
-              <a href="mailto:lomboktravelia@gmail.com" target="_blank" rel="noopener noreferrer">
+              <a href="mailto:travelialombok@gmail.com" target="_blank" rel="noopener noreferrer">
                 <FaEnvelope className="w-6 h-6 text-yellow-500 hover:text-yellow-700" />
               </a>
             </div>
