@@ -18,7 +18,7 @@ export default function PaketTourDetail({ params }) {
 
   const handleOrderWhatsApp = () => {
     const message = `Hallo, saya ingin konsultasi untuk pesan paket tour ini: ${tourDetails?.nama_paket}.`;
-    const phoneNumber = "+6285338717747";
+    const phoneNumber = "+6281916025009";
     const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(waLink, "_blank");
   };
