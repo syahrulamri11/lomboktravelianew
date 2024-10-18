@@ -112,7 +112,7 @@ export default function ContactUs() {
                   <FaFacebook />
                 </Link>
                 <Link
-                  href="https://wa.me/83143052787"
+                  href="https://wa.me/6281916025009"
                   className="text-green-600 text-4xl hover:text-green-700 transition-transform transform hover:scale-110"
                 >
                   <FaWhatsapp />
@@ -124,7 +124,7 @@ export default function ContactUs() {
                   <FaInstagram />
                 </Link>
                 <Link
-                  href="mailto:lomboktravelia24@gmail.com"
+                  href="mailto:travelialombok@gmail.com"
                   className="text-red-600 text-4xl hover:text-red-700 transition-transform transform hover:scale-110"
                 >
                   <FaEnvelope />
@@ -189,7 +189,7 @@ export default function ContactUs() {
         </div>
       </section>
       <a
-        href="https://wa.me/6285338717747?text=Hallo%20Saya%20Ingin%20Berkonsultasi%20Untuk%20Paket%20Tour%20Di%20Lombok%20Travelia"
+        href="https://wa.me/6281916025009?text=Hallo%20Saya%20Ingin%20Berkonsultasi%20Untuk%20Paket%20Tour%20Di%20Lombok%20Travelia"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg transition-all hover:shadow-xl hover:bg-green-600 flex items-center"

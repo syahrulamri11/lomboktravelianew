@@ -370,7 +370,7 @@ export default function Home() {
         Info Lebih Lanjut Hubungi Kami
       </h2>
       <a
-        href="https://wa.me/83123456789?text=Hallo%20Saya%20Ingin%20Berkonsultasi%20Untuk%20Paket%20Tour%20Di%20Lombok%20Travelia"
+        href="https://wa.me/6281916025009?text=Hallo%20Saya%20Ingin%20Berkonsultasi%20Untuk%20Paket%20Tour%20Di%20Lombok%20Travelia"
         className="bg-green-600 text-white px-6 py-3 rounded inline-block hover:bg-green-700 transition-colors duration-200"
       >
         WhatsApp &rarr;
@@ -378,7 +378,7 @@ export default function Home() {
     </section>
 
     <a
-        href="https://wa.me/6285338717747?text=Hallo%20Saya%20Ingin%20Berkonsultasi%20Untuk%20Paket%20Tour%20Di%20Lombok%20Travelia"
+        href="https://wa.me/6281916025009?text=Hallo%20Saya%20Ingin%20Berkonsultasi%20Untuk%20Paket%20Tour%20Di%20Lombok%20Travelia"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg transition-all hover:shadow-xl hover:bg-green-600 flex items-center"

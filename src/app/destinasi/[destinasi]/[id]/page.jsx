@@ -213,7 +213,7 @@ export default function DestinasiDetailPage({ params }) {
       </section>
 
       <a
-        href="https://wa.me/6285338717747?text=Hallo%20Saya%20Ingin%20Berkonsultasi%20Untuk%20Paket%20Tour%20Di%20Lombok%20Travelia"
+        href="https://wa.me/6281916025009?text=Hallo%20Saya%20Ingin%20Berkonsultasi%20Untuk%20Paket%20Tour%20Di%20Lombok%20Travelia"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg transition-all hover:shadow-xl hover:bg-green-600 flex items-center"
